@@ -282,12 +282,13 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
-<pre><code>6. What is broadcasting?  
-- Hvis to tensor er af forskellige ranks, kan vi bruge broadcasting til at expande den mindre ranket tensor til samme rank, som den større tensor. Det er vigtigt at forstå at PyTorch ikke faktisk kopier billederne til at opnå ranken, men lader som om at tensoren er af den størrelse. Derved undgås der at allokeres hukommelse til det. Dette muliggør, at PyTorch kan bruge matematiske funktioner på de 2 tensors / array f.eks. at gange dem eller tage gennemsnittet.
-
-</code></pre>
 <ol>
+<li>
+<p>What is broadcasting?</p>
+<ul>
+<li>Hvis to tensor er af forskellige ranks, kan vi bruge broadcasting til at expande den mindre ranket tensor til samme rank, som den større tensor. Det er vigtigt at forstå at PyTorch ikke faktisk kopier billederne til at opnå ranken, men lader som om at tensoren er af den størrelse. Derved undgås der at allokeres hukommelse til det. Dette muliggør, at PyTorch kan bruge matematiske funktioner på de 2 tensors / array f.eks. at gange dem eller tage gennemsnittet.</li>
+</ul>
+</li>
 <li>
 <p>Are metrics generally calculated using the training set, or the validation set? Why?</p>
 <ul>
@@ -312,7 +313,7 @@ window.onload = wrap_img;
 <li>Repeat the Process</li>
 <li>
 <p>Stop</p>
-<p><img src="assignments/the-seven-steps.jpg" alt="The Seven Steps"></p>
+<p><img src="exercises/the-seven-steps.jpg" alt="The Seven Steps"></p>
 </li>
 </ul>
 </li>

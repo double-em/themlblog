@@ -149,87 +149,226 @@ Colorizing images, increasing image resolution, removing noise from images, conv
       <li>A learning rule whereby patterns of connectivity are modified by experience • An environment within which the system must operate</li>
     </ul>
   </li>
-  <li>What were the two theoretical misunderstandings that held back the field of neural networks?
-Første misforståelse: at fordi et enkelt lag af neuralt netværk devices ikke kunne lære noget så simpelt som XOR, så var neurale netværk en deadend
-Anden misforståelse: At netværket blev for langsomt og stort hvis man tilføjer endnu et lag.</li>
-  <li>What is a GPU?
-Processoren der ligger på grafikkortet
-Graphical Processing unit</li>
-  <li>Why is it hard to use a traditional computer program to recognize images in a photo?
-Med et traditionelt computer program skal du beskrive de skridt, som du gør, for at genkende et billede. Det ved vi ikke præcist selv, derfor kan vi ikke lære computeren det.</li>
-  <li>What did Samuel mean by “weight assignment”?
-Andre værdier, der definerer hvordan programmet vil operere</li>
-  <li>What term do we normally use in deep learning for what Samuel called “weights”?
-Parameters</li>
+  <li>
+    <p>What were the two theoretical misunderstandings that held back the field of neural networks?</p>
+
+    <ul>
+      <li>
+        <p>Første misforståelse: at fordi et enkelt lag af neuralt netværk devices ikke kunne lære noget så simpelt som XOR, så var neurale netværk en deadend.</p>
+      </li>
+      <li>
+        <p>Anden misforståelse: At netværket blev for langsomt og stort hvis man tilføjer endnu et lag.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>What is a GPU?</p>
+
+    <ul>
+      <li>Processoren der ligger på grafikkortet</li>
+      <li>Graphical Processing unit</li>
+    </ul>
+  </li>
+  <li>
+    <p>Why is it hard to use a traditional computer program to recognize images in a photo?</p>
+
+    <ul>
+      <li>Med et traditionelt computer program skal du beskrive de skridt, som du gør, for at genkende et billede. Det ved vi ikke præcist selv, derfor kan vi ikke lære computeren det.</li>
+    </ul>
+  </li>
+  <li>
+    <p>What did Samuel mean by “weight assignment”?</p>
+
+    <ul>
+      <li>Andre værdier, der definerer hvordan programmet vil operere</li>
+    </ul>
+  </li>
+  <li>
+    <p>What term do we normally use in deep learning for what Samuel called “weights”?</p>
+
+    <ul>
+      <li>Parameters</li>
+    </ul>
+  </li>
   <li>
     <p>Draw a picture that summarizes Samuel’s view of a machine learning model.</p>
   </li>
-  <li>Why is it hard to understand why a deep learning model makes a particular prediction?
-Fordi det er en Blackbox.
-For at finde ud af det skal der graves for at finde ud af mere.</li>
-  <li>What is the name of the theorem that shows that a neural network can solve any mathematical problem to any level of accuracy?
-    Universal Approximation Theorem</li>
-  <li>What do you need in order to train a model?
-    Training set
-    Validation set
-    Labelled Data?</li>
-  <li>How could a feedback loop impact the rollout of a predictive policing model?
-    Grunden til det er fordi der bruges modellen til at predicte crimes, er det der hvor politiet har fokus, derfor er det bare en bekræftelse for modellen at den havde ret. Det næste dataset består så kun af bekræftelser, hvormed modellen bliver ved med og bliver bliver bekræftet. Dermed er den biased og det er en positive feedback loop</li>
-  <li>Do we always have to use 224×224-pixel images with the cat recognition model?
-    No. Increase in size means higher memory consumption and longer computation time, but also higher accuracy.</li>
-  <li>What is the difference between classification and regression?
-    classification: sæt ind i kasser
-    regression: Handler om at finde en optimal funktion til at identificere data fra en kontinuerlig virkelig værdi og forudsige ting om den.</li>
-  <li>What is a validation set? What is a test set? Why do we need them?
-    Et set for at teste ens model
-    bruges for at se om modellen har lært mønstre i stedet for training sættet
-    also known as the development set (which is used only for evaluation
-    Test set er en isoleret set af data vi fjernede fra starten
-    For at se om mennesket har overfittet.</li>
-  <li>What will fastai do if you don’t provide a validation set?
-    Hvis du ikke gi’r et valideringsset, frasorterer det selv 20% af training dataet.</li>
-  <li>Can we always use a random sample for a validation set? Why or why not?
-    Hvis modellen skal forudsige ting ude i fremtiden, er det bedst at frasortere den sidste portion af dataet.
-    Det er bedst at bruge, hvad man ved om den virkelige data, når man skal frasortere til validation data.</li>
-  <li>What is overfitting? Provide an example.
-    Når modellen bliver overtrænet på ens data, så dens algoritme blot afspejler træningsdata i stedet for den ønskede situation.</li>
-  <li>What is a metric? How does it differ from “loss”?
-    Metric er hvor god modellen er, præsenteret for mennesker
-    Loss er hvor god modellen er, valgt til at styre træningen via SGD</li>
-  <li>How can pretrained models help?
-    Dermed er der ikke brug for store datasets, da den allerede er trainet. Der bruges fine_tune for at tilpasse det det nye dataset.
-    Lower training time
-    Often better result</li>
-  <li>What is the “head” of a model?
-    Finetuningen vi laver ud fra vores dataset.
-    Det er den del af modellen der blev tilføjet ved brug af fine_tune med det nye dataset.</li>
-  <li>What kinds of features do the early layers of a CNN find? How about the later layers?
-    Første lag er linier: vertikale, horizontale, diagonale
-    Næste lag: Simple former og mønstre
-    Senere lag kan se mere abstrakte former/mønstre</li>
-  <li>Are image models only useful for photos?
-    Nej. Alt data der kan præsenteres visuelt, og mennesker kan se forskel på, kan bruges til image models.</li>
-  <li>What is an “architecture”?
-    Strukturen af modellen
-    Definerer den matematiske funktion, som vi forsøger at fitte</li>
-  <li>What is segmentation?
-    Pixelbaseret klassifikations problem.
-    Forsøger at forudsige en label for hvert eneste pixel i et billede.</li>
-  <li>What is y_range used for? When do we need it?
-    Bruges til at begrænse de forudsete værdier, når der bliver forudset en numerisk værdi inden for en given rækkevidde.</li>
-  <li>What are “hyperparameters”?
-    Parametre der definerer hvordan modellen er trænet. f.eks hvor længe den bli’r trænet
-    Metadata/metaparametre</li>
-  <li>What’s the best way to avoid failures when using AI in an organization?
-    Sikre at man har alle tre data set: training, validation og testing set.
-    Start med en simpel model, gør komplekst senere.</li>
+  <li>
+    <p>Why is it hard to understand why a deep learning model makes a particular prediction?</p>
+
+    <ul>
+      <li>Fordi det er en Blackbox.</li>
+      <li>For at finde ud af det skal der graves for at finde ud af mere.</li>
+    </ul>
+  </li>
+  <li>
+    <p>What is the name of the theorem that shows that a neural network can solve any mathematical problem to any level of accuracy?</p>
+
+    <ul>
+      <li>Universal Approximation Theorem</li>
+    </ul>
+  </li>
+  <li>
+    <p>What do you need in order to train a model?</p>
+
+    <ul>
+      <li>Training set</li>
+      <li>Validation set</li>
+      <li>Labelled Data?</li>
+    </ul>
+  </li>
+  <li>
+    <p>How could a feedback loop impact the rollout of a predictive policing model?</p>
+
+    <ul>
+      <li>Grunden til det er fordi der bruges modellen til at predicte crimes, er det der hvor politiet har fokus, derfor er det bare en bekræftelse for modellen at den havde ret. Det næste dataset består så kun af bekræftelser, hvormed modellen bliver ved med og bliver bliver bekræftet. Dermed er den biased og det er en positive feedback loop.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Do we always have to use 224×224-pixel images with the cat recognition model?</p>
+
+    <ul>
+      <li>No. Increase in size means higher memory consumption and longer computation time, but also higher accuracy.</li>
+    </ul>
+  </li>
+  <li>
+    <p>What is the difference between classification and regression?</p>
+
+    <ul>
+      <li>Classification: sæt ind i kasser</li>
+      <li>Regression: Handler om at finde en optimal funktion til at identificere data fra en kontinuerlig virkelig værdi og forudsige ting om den.</li>
+    </ul>
+  </li>
+  <li>
+    <p>What is a validation set? What is a test set? Why do we need them?</p>
+
+    <ul>
+      <li>
+        <p>Et sæt for at teste ens model
+bruges for at se om modellen har lært mønstre i stedet for training sættet also known as the development set (which is used only for evaluation</p>
+      </li>
+      <li>Test set er en isoleret set af data vi fjernede fra starten</li>
+      <li>For at se om mennesket har overfittet.</li>
+    </ul>
+  </li>
+  <li>
+    <p>What will fastai do if you don’t provide a validation set?
+Hvis du ikke gi’r et valideringsset, frasorterer det selv 20% af training dataet.</p>
+  </li>
+  <li>
+    <p>Can we always use a random sample for a validation set? Why or why not?</p>
+
+    <ul>
+      <li>Hvis modellen skal forudsige ting ude i fremtiden, er det bedst at frasortere den sidste portion af dataet.
+Det er bedst at bruge, hvad man ved om den virkelige data, når man skal frasortere til validation data.</li>
+    </ul>
+  </li>
+  <li>
+    <p>What is overfitting? Provide an example.</p>
+
+    <p>Når modellen bliver overtrænet på ens data, så dens algoritme blot afspejler træningsdata i stedet for den ønskede situation.</p>
+  </li>
+  <li>
+    <p>What is a metric? How does it differ from “loss”?</p>
+
+    <ul>
+      <li>Metric er hvor god modellen er, præsenteret for mennesker
+Loss er hvor god modellen er, valgt til at styre træningen via SGD</li>
+    </ul>
+  </li>
+  <li>
+    <p>How can pretrained models help?</p>
+
+    <ul>
+      <li>Dermed er der ikke brug for store datasets, da den allerede er trainet. Der bruges fine_tune for at tilpasse det det nye dataset.</li>
+      <li>Lower training time</li>
+      <li>Often better result</li>
+    </ul>
+  </li>
+  <li>
+    <p>What is the “head” of a model?</p>
+
+    <ul>
+      <li>Finetuningen vi laver ud fra vores dataset.</li>
+      <li>Det er den del af modellen der blev tilføjet ved brug af fine_tune med det nye dataset.</li>
+    </ul>
+  </li>
+  <li>
+    <p>What kinds of features do the early layers of a CNN find? How about the later layers?</p>
+
+    <ul>
+      <li>Første lag er linier: vertikale, horizontale, diagonale</li>
+      <li>Næste lag: Simple former og mønstre</li>
+      <li>Senere lag kan se mere abstrakte former/mønstre</li>
+    </ul>
+  </li>
+  <li>
+    <p>Are image models only useful for photos?</p>
+
+    <ul>
+      <li>Nej. Alt data der kan præsenteres visuelt, og mennesker kan se forskel på, kan bruges til image models.</li>
+    </ul>
+  </li>
+  <li>
+    <p>What is an “architecture”?</p>
+
+    <ul>
+      <li>Strukturen af modellen</li>
+      <li>Definerer den matematiske funktion, som vi forsøger at fitte.</li>
+    </ul>
+  </li>
+  <li>
+    <p>What is segmentation?</p>
+
+    <ul>
+      <li>Pixelbaseret klassifikations problem.</li>
+      <li>Forsøger at forudsige en label for hvert eneste pixel i et billede.</li>
+    </ul>
+  </li>
+  <li>
+    <p>What is y_range used for? When do we need it?</p>
+
+    <ul>
+      <li>Bruges til at begrænse de forudsete værdier, når der bliver forudset en numerisk værdi inden for en given rækkevidde.</li>
+    </ul>
+  </li>
+  <li>
+    <p>What are “hyperparameters”?</p>
+
+    <ul>
+      <li>Parametre der definerer hvordan modellen er trænet. f.eks hvor længe den bli’r trænet</li>
+      <li>Metadata/metaparametre</li>
+    </ul>
+  </li>
+  <li>
+    <p>What’s the best way to avoid failures when using AI in an organization?</p>
+
+    <ul>
+      <li>
+        <p>Sikre at man har alle tre data set: training, validation og testing set.</p>
+      </li>
+      <li>
+        <p>Start med en simpel model, gør komplekst senere.</p>
+      </li>
+    </ul>
+  </li>
   <li>Complete the Jupyter Notebook online appendix. (use the file app_jupyter.ipynb in Gradient or get it from github: https://oreil.ly/9uPZe)</li>
-  <li>Why is a GPU useful for deep learning? How is a CPU different, and why is it less effective for deep learning?
-    Mange små kerner
-    Gode til parallelisere</li>
-  <li>Try to think of three areas where feedback loops might impact the use of machine learning. See if you can find documented examples of that happening in practice.
-    Netflix predictions
-    Amazon predictions</li>
+  <li>
+    <p>Why is a GPU useful for deep learning? How is a CPU different, and why is it less effective for deep learning?</p>
+
+    <ul>
+      <li>Mange små kerner</li>
+      <li>Gode til parallelisere</li>
+    </ul>
+  </li>
+  <li>
+    <p>Try to think of three areas where feedback loops might impact the use of machine learning. See if you can find documented examples of that happening in practice.</p>
+
+    <ul>
+      <li>Netflix predictions</li>
+      <li>Amazon predictions</li>
+    </ul>
+  </li>
 </ol>
 
   </div><a class="u-url" href="/themlblog/exercise/2021/02/09/week-6.html" hidden></a>
