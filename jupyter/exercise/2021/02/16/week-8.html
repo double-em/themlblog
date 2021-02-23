@@ -10,14 +10,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Exercises from Chapter 4A." />
 <meta property="og:description" content="Exercises from Chapter 4A." />
-<link rel="canonical" href="https://double-em.github.io/themlblog/jupyter/assignment/2021/02/16/week-8.html" />
-<meta property="og:url" content="https://double-em.github.io/themlblog/jupyter/assignment/2021/02/16/week-8.html" />
+<link rel="canonical" href="https://double-em.github.io/themlblog/jupyter/exercise/2021/02/16/week-8.html" />
+<meta property="og:url" content="https://double-em.github.io/themlblog/jupyter/exercise/2021/02/16/week-8.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:image" content="https://double-em.github.io/themlblog/images/chart-preview.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-16T00:00:00-06:00" />
 <script type="application/ld+json">
-{"url":"https://double-em.github.io/themlblog/jupyter/assignment/2021/02/16/week-8.html","@type":"BlogPosting","headline":"Week 8 - Chapter 4A","dateModified":"2021-02-16T00:00:00-06:00","datePublished":"2021-02-16T00:00:00-06:00","image":"https://double-em.github.io/themlblog/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://double-em.github.io/themlblog/jupyter/assignment/2021/02/16/week-8.html"},"description":"Exercises from Chapter 4A.","@context":"https://schema.org"}</script>
+{"url":"https://double-em.github.io/themlblog/jupyter/exercise/2021/02/16/week-8.html","@type":"BlogPosting","headline":"Week 8 - Chapter 4A","dateModified":"2021-02-16T00:00:00-06:00","datePublished":"2021-02-16T00:00:00-06:00","image":"https://double-em.github.io/themlblog/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://double-em.github.io/themlblog/jupyter/exercise/2021/02/16/week-8.html"},"description":"Exercises from Chapter 4A.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/themlblog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://double-em.github.io/themlblog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/themlblog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -88,7 +88,7 @@ window.onload = wrap_img;
         <a class="category-tags-link" href="/themlblog/categories/#jupyter">jupyter</a>
         &nbsp;
       
-        <a class="category-tags-link" href="/themlblog/categories/#assignment">assignment</a>
+        <a class="category-tags-link" href="/themlblog/categories/#exercise">exercise</a>
         
       
       </p>
@@ -282,13 +282,12 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+
+<pre><code>6. What is broadcasting?  
+- Hvis to tensor er af forskellige ranks, kan vi bruge broadcasting til at expande den mindre ranket tensor til samme rank, som den større tensor. Det er vigtigt at forstå at PyTorch ikke faktisk kopier billederne til at opnå ranken, men lader som om at tensoren er af den størrelse. Derved undgås der at allokeres hukommelse til det. Dette muliggør, at PyTorch kan bruge matematiske funktioner på de 2 tensors / array f.eks. at gange dem eller tage gennemsnittet.
+
+</code></pre>
 <ol>
-<li>
-<p>What is broadcasting?</p>
-<ul>
-<li>Hvis to tensor er af forskellige ranks, kan vi bruge broadcasting til at expande den mindre ranket tensor til samme rank, som den større tensor. Det er vigtigt at forstå at PyTorch ikke faktisk kopier billederne til at opnå ranken, men lader som om at tensoren er af den størrelse. Derved undgås der at allokeres hukommelse til det. Dette muliggør, at PyTorch kan bruge matematiske funktioner på de 2 tensors / array f.eks. at gange dem eller tage gennemsnittet.</li>
-</ul>
-</li>
 <li>
 <p>Are metrics generally calculated using the training set, or the validation set? Why?</p>
 <ul>
@@ -311,11 +310,12 @@ window.onload = wrap_img;
 <li>Calculate the gradients</li>
 <li>Step the weights</li>
 <li>Repeat the Process</li>
-<li>Stop</li>
+<li>
+<p>Stop</p>
+<p><img src="assignments/the-seven-steps.jpg" alt="The Seven Steps"></p>
+</li>
 </ul>
 </li>
-</ol>
-<ol>
 <li>
 <p>How do we initialize the weights in a model?</p>
 <ul>
@@ -382,7 +382,7 @@ window.onload = wrap_img;
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/themlblog/jupyter/assignment/2021/02/16/week-8.html" hidden></a>
+</script><a class="u-url" href="/themlblog/jupyter/exercise/2021/02/16/week-8.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
